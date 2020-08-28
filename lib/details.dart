@@ -21,14 +21,14 @@ class _DetailsState extends State<Details> {
                   pinned: false,
                   elevation: 0,
                   backgroundColor: Color(0xffFFDCD6),
-                  expandedHeight: 300,
+                  expandedHeight: 270,
                   automaticallyImplyLeading: false,
                   title: Container(
-                    height: 50,
-                    width: 50,
+                    height: 40,
+                    width: 40,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(20)
+                      borderRadius: BorderRadius.circular(15)
                     ),
                     child: Icon(
                       CupertinoIcons.back,
@@ -40,7 +40,7 @@ class _DetailsState extends State<Details> {
                   flexibleSpace: FlexibleSpaceBar(
                     collapseMode: CollapseMode.parallax,
                     background: Padding(
-                      padding: EdgeInsets.only(top: 30),
+                      padding: EdgeInsets.only(top: 40),
                       child: Image.asset(
                         "assets/images/bg2.png",
                         alignment: Alignment.topCenter,
@@ -56,7 +56,7 @@ class _DetailsState extends State<Details> {
                 padding: EdgeInsets.symmetric(horizontal: 23),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(60)
+                  borderRadius: BorderRadius.circular(50)
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,28 +97,32 @@ class _DetailsState extends State<Details> {
                     ),
                     Row(
                       children: [
-                        SvgPicture.asset("assets/images/star.svg",),
+                        SvgPicture.asset("assets/images/star.svg",
+                          height: 10,
+                        ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(3, 5, 0, 0),
                           child: Text(
                             "4.5",
                             style: TextStyle(
                               fontFamily: "Gilroy",
-                              fontSize: 17,
+                              fontSize: 13,
                               color: Color(0xffff7c65),
                               fontWeight: FontWeight.w500
                             ),
                           ),
                         ),
-                        SizedBox(width: 30,),
-                        SvgPicture.asset("assets/images/timer.svg",),
+                        SizedBox(width: 15,),
+                        SvgPicture.asset("assets/images/timer.svg",
+                          height: 12,
+                        ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(3, 5, 0, 0),
                           child: Text(
                             "64 Hours",
                             style: TextStyle(
                               fontFamily: "Gilroy",
-                              fontSize: 17,
+                              fontSize: 13,
                               color: Color(0xffff7c65),
                               fontWeight: FontWeight.w500
                             ),
@@ -128,7 +132,7 @@ class _DetailsState extends State<Details> {
                     ),
                     SizedBox(height: 25,),
                     CustomTile(
-                      title: "Design basic",
+                      title: "Design Basic",
                       duration: "5:35 mins",
                       selected: true,
                     ),
@@ -173,19 +177,19 @@ class _DetailsState extends State<Details> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 120,
+              height: 100,
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
                     offset: Offset(0, -5),
                     color: Colors.black.withOpacity(0.1),
-                    blurRadius: 15
+                    blurRadius: 8
                   )
                 ],
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(50),
-                  topRight: Radius.circular(50)
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40)
                 )
               ),
               child: Padding(
@@ -203,7 +207,7 @@ class _DetailsState extends State<Details> {
                       ),
                       child: Container(
                         height: 50,
-                        margin: EdgeInsets.only(bottom: 12),
+                        margin: EdgeInsets.only(bottom: 8),
                         child: RaisedButton(
                           onPressed: () {
 
@@ -227,12 +231,12 @@ class _DetailsState extends State<Details> {
                       child: Container(
                         width: 60,
                         decoration: BoxDecoration(
-                          color: Color(0xffC8D1F2),
+                          color: Color(0xff2C4BBA),
                           borderRadius: BorderRadius.circular(20)
                         ),
                         child: Container(
                           height: 50,
-                          margin: EdgeInsets.only(bottom: 12),
+                          margin: EdgeInsets.only(bottom: 8),
                           child: RaisedButton(
                             onPressed: () {
 
@@ -290,7 +294,7 @@ class CustomTile extends StatelessWidget {
             height: 40,
             decoration: BoxDecoration(
               color: selected? Color(0xfff56c6b): Color(0xffffeaea),
-              borderRadius: BorderRadius.circular(15)
+              borderRadius: BorderRadius.circular(16)
             ),
             child: Center(
               child: Padding(
@@ -307,7 +311,7 @@ class CustomTile extends StatelessWidget {
             style: TextStyle(
               fontFamily: "Gilroy",
               fontSize: 18,
-              color: Color(0xff777777)
+              color: selected? Color(0xff121212): Color(0xff777777)
             ),
           ),
           contentPadding: EdgeInsets.zero,
@@ -316,7 +320,7 @@ class CustomTile extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontFamily: "Gilroy",
-              fontSize: 18,
+              fontSize: 16,
               color: Color(0xff777777)
             ),
           ),
